@@ -1,0 +1,104 @@
+/*@keyframes myAnim {
+	0%,
+	50%,
+	100% {
+		opacity: 1;
+	}
+
+	25%,
+	75% {
+		opacity: 0;
+	}
+}
+body{
+    background-color: rgb(232, 232, 232);
+}
+#heart {
+	animation: myAnim 2s ease 0s 100 normal forwards;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    width: 400px;
+    height: 400px;
+    /* animation-duration: 100s; 
+}*/
+.heading1{
+    /* font-size:500%; */
+    font-weight: bolder;
+    /* display:block; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* bottom: 200px; */
+    /* top: 1000px; */
+    /* left: 600px; */
+    
+    color:white;
+}
+
+ body{ 
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: #0b1522;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    } 
+.container{
+    display: flex;
+    margin-top: 250px;
+    /* justify-content: center; */
+}
+    
+.heart{
+    height: 150px;
+    width: 150px;
+    left: 20px;
+    background: #f20044;
+    position: relative;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px #f20044 ;
+    animation: heart 0.6s linear infinite;
+     }
+.heart:hover{
+    cursor: pointer;
+}
+
+     @keyframes heart{
+        0%{
+            transform: rotate(-45deg) scale(1.07);
+        }
+        80%{
+            transform: rotate(-45deg) scale(1.0);
+        }
+        100%{
+            transform: rotate(-45deg) scale(0.8);
+        }
+     }
+    
+    .heart:before{
+    content: '';
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background: #f20044;
+    top: -50%;
+    border-radius:100px ;
+    box-shadow: -10px -10px 90px #f20044 ;
+    }
+    .heart:after{
+        background: #f20044;
+        position: relative;
+        transform: rotate(-45deg);
+        content: '';
+        position: absolute;
+        height: 150px;
+        width: 150px;
+        background: #f20044;
+        right: -50%;
+        box-shadow: 10px 10px 90px #f20044 ;
+        border-radius:100px ;
+        }
+
+

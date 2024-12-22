@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="about.css">
+    <script>function readMore() {
+        var expandInfo = document.getElementById("more-info-js");
+        var mainHeadings = document.getElementById("main-headings-js");
+        
+        mainHeadings.style.transform = "scale(0.7)";
+        expandInfo.style.height = "350px";
+        document.getElementsByClassName('link')[0].style.visibility='hidden';
+      } </script>
+</head>
+<body>
+    <div class="container">
+        <div class="container-inner">
+          <div class="main-content">
+            <div class="main-headings" id="main-headings-js">
+            <!-- <p id="by-line">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> -->
+      
+            <div class="heading">
+              <h3 id="heading1"></h3>
+              <h3 id="heading2"></h3>
+              <h1 id="heading3">DocAI</h1>
+            </div>
+      
+            <div class="short-bio">
+              <p>DocAI is a healthcare chatbot that can be used to make initial disease diagnosis, give doctor recommendation, help book doctor appointment.</p>
+         
+            </div>
+      
+            <a href="#" class="link" onclick="readMore()">Read More</a>
+            </div>
+            
+            <div class="more-info " id="more-info-js">
+              
+              <!-- <h4>Lorem ipsum dolor sit.</h4> -->
+              <p>    Greetings from DocAI, your dependable assistant for confidently and easily navigating the world of healthcare.
+                We at DocAI are aware of the difficulties and nuances people encounter when trying to manage their health.For 
+                this reason, we have developed a cutting-edge AI-powered solution that is customised to meet your needs and offers 
+                professional advice and individual support at every stage. When it comes to trusted help and support, DocAI is 
+                always available to help, be it with advice on symptoms, information about medical conditions, or just a sympathetic
+                ear to listen. You can be sure that your data is handled with the highest care and confidentiality because we are 
+                committed to privacy and security. We value your trust above all else, and we work to uphold the strictest moral 
+                principles in every facet.
+                Come along with us on this path to a happy, healthier you. Allow DocAI to assist you in reaching your wellness 
+                objectives and making wise health-related decisions. We can create a healthier and more promising future by
+                working together.
+                We appreciate you selecting DocAI. It is a previlege for us to accompany you on your medical journey.
+</p>
+            </div>
+            
+          </div>
+      
+          <div class="image-wrapper">
+          <div class="image-container">
+            <img class="image" src="ronak-valobobhai-4qHWTuP_RLw-unsplash.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      </div>
+</body>
+</html>

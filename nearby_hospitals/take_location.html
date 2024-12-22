@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+        text-align: center;
+        background-color: #99a7f9;
+    }
+    #location_form{
+        border: 2px solid #7b8efa;
+        box-shadow: 5px 5px 5px #7b8efa;
+        padding: 25px;
+        background-color:antiquewhite;
+        border-radius: 10px;
+        box-sizing: content-box;
+        display: inline-block;
+    }
+    #input_text, #new_temp{
+        border-radius: 8px;
+        padding: 10px;
+    }
+    #new_temp{
+        background-color: orangered;
+        color: white;
+        font-weight: 700;
+ 
+    }
+    #new_temp:hover{
+        background-color: white;
+        color: orangered;
+    }
+
+    </style>
+</head>
+<body>
+    <form id="location_form" method="POST">
+        <input id="input_text" name="text" placeholder="Enter Location">
+        <input id="new_temp" type="submit">
+    </form>
+    <!-- <img src="map_images.png" alt="map"> -->
+
+    <script>
+         
+        // document.getElementById("new_temp").addEventListener("click", function() {
+        //     window.location.href = "/map_func";
+        // });
+    
+    </script>
+</body>
+</html>

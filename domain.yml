@@ -1,0 +1,148 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - thanks
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - question
+  - challenge
+  - intro_love
+  - intro_cute
+  - intro_unhappy
+  - get_name
+  - ask_disease
+  - inform_symptoms
+  - question_disease
+  - give_time
+  - inform_disease
+  - hospital
+
+entities:
+  - disease
+  - name
+
+slots:
+  disease:
+    type: text
+    influence_conversation: True
+    mappings:
+      - type: from_entity
+        entity: disease
+  name:
+    type: text
+    influence_conversation: True
+    mappings:
+      - type: from_entity
+        entity: name
+
+
+actions:
+  - action_get_diagnosis
+  - action_give_time
+  - action_disease_info
+  # - action_get_location
+
+responses:
+  utter_greet:
+    - text: "Hey Welcome, how can I assist you today?"
+    - text: "Hi dear!!!!, speak up with your problem"
+    - text: "Hey!! Risa here, Know me, how can I help you"
+    - text: "Hi, How can I help you today?"
+
+
+  utter_did_that_help:
+  - text: "Did you find the solution?"
+  - text: "is this helpful??"
+  - text: "Did you get the cure of your symptoms??"
+
+  utter_happy:
+  - text: "Great, carry on!, tell me if you have any other problem"
+
+
+  utter_goodbye:
+  - text: "Goodbye, see you soon!"
+  - text: "Come back!! Again and find your solution in Healthcare"
+  - text: "Goodbye, take care!!!"
+
+  utter_thanks:
+    - text: "No issues mate, We are here to help."
+    - text: "Feel free to say any problem, ready to help always."
+
+  utter_iamabot:
+  - text: "I am Rasa, powered by Rasa and made by Team Graphic. "
+
+  utter_name:
+  - text: "Hey {name} , Rasa Here, Always for your service in healthcare"
+  - text: "Hey {name}, Rasa Here, say your symptoms I will try my best to help you out."
+  - text: "Hey {name}, Rasa Here, tell me your symptoms, I will Help you out!!!"
+
+  utter_deny:
+    - text: "Can your repeat your problem, I will try to find the best solution again"
+    - text: "Sorry!!! for the inconvenience caused, please tell me your problem again."
+
+  utter_unhappy:
+    - text: "Don't worry tell me your symptoms, I will find the solution."
+    - text: "Don't lose hope, Rasa is ready for your service"
+      image: "https://dkk4qeqny48s0.cloudfront.net/wp-content/uploads/2019/02/chatbot_blog-1.jpg"
+
+  utter_bot:
+    - text: "I am a Healthcare Chatbot developed by team 'Graphic', Always for your service, how can I help you."
+    - text: "I am Rasa, Your virtual healthcare bot, How can I help you out."
+
+  utter_challenge:
+    - text: "Sorry, if I have said somthing wrong, I only can help you at the healthcare support."
+    - text: "Extreamly sorry if I said anything wrong, I only can give you the suggestion, for further treatment you have to consult any doctor."
+
+  utter_love:
+    - text: "Thanks for your sweet words, but I have not that time to give you time, there are so many ill persons whom I need to cure."
+    - text: "thanks mate, so many thanks for your sweet words, it motivate me a lot."
+
+  utter_happy2:
+    - text: "Tell me the disease on which you wanna know the information"
+    - text: "Tell me your disease"
+
+  utter_deny2:
+    - text: "Okay Come Back, when the problem occures"
+    - text: "Okay, no issues, go on"
+
+  utter_deny3:
+    - text: "can you tell me your disease again with proper spelling"
+    - text: "Sorry!!! for the inconvenience caused, please tell me your disease again."
+
+  utter_ask_disease:
+    - text: "Sure! Please provide the name of the disease you want information about."
+    - text: "of course!!, Tell me the name of the disease"
+    - text: "Sure, tell me the disease name"
+
+  utter_ask_more_info:
+    - text: "Did you get the information you were looking for? Is there anything else I can assist you with?"
+
+  utter_disease_info:
+    - text: "Here is some information about {disease}:\n{info}"
+      buttons:
+        - title: "More Info"
+          payload: "/more_info"
+
+
+  utter_no_info:
+    - text: "I'm sorry, I couldn't find information about that disease. Please try a different disease or use the correct spelling."
+    - text: "Really Sorry, I fail to find the information, please use other disease."
+
+  utter_happy3:
+    - text: "Great, carry on!, tell me if you have any other problem. For your information now you can know the PRECAUTIONS ABOUT THE DISEASE,
+                                               INFORMATION ABOUT THE DISEASE & YOUR NEAREST HOSPITALS INFO."
+
+  utter_hospital:
+    - text: "Click on the given link to access nerby hospital location: http://localhost:8001/"
+
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
